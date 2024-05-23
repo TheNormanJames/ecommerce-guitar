@@ -1,4 +1,11 @@
-export default function Guitar({ guitar, addToCart }) {
+import type { Guitar } from '../types/types';
+
+type GuitarProps = {
+  guitar: Guitar;
+  addToCart: (item: Guitar) => void;
+};
+
+export default function Guitar({ guitar, addToCart }: GuitarProps) {
   const { price, name, image, description } = guitar;
 
   return (
